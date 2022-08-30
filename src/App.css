@@ -39,6 +39,29 @@
 
 /* Start css app custom */
 
-form{
-  background: red;
+.wrapper{
+  background: rgb(245, 245, 245);
+  padding: 20px;
+  box-sizing: border-box;
+  width: 350px;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+form input{
+  width: 75%;
+}
+form input, button{
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline;
+  border: none;
+}
+form button{
+  width: 25%;
+}
+.contador{
+  margin-top: 10px;
+  text-align: center;
 }

@@ -4,18 +4,18 @@ function App() {
   const [gastos, setGastos] = useState([1500, 300, 450]);
 
   return (
-    <>
+    <div className="wrapper">
       <AgregarGasto setGastos={setGastos} gastos={gastos} />
       <Contador gastos={gastos} />
       <GastosMes gastos={gastos} />
       
-    </>
+    </div>
   );
 }
 
 function Contador({ gastos }) {
   let dataGasto = gastos.reduce((a, b) => a + b, 0);
-  return <div> Gasto mensual: {dataGasto}</div>;
+  return <div className="contador"> Gasto mensual: {dataGasto}</div>;
 }
 
 function GastosMes(props) {
@@ -39,8 +39,8 @@ function AgregarGasto({ gastos, setGastos }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input autocomplete="off" type="text" id="gasto" />
-      <button type="Submit"> Agregar gasto </button>
+      <input autocomplete="off" type="number" id="gasto" />
+      <button type="Submit">Agregar</button>
     </form>
   );
 }
